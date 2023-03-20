@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tugas_6.Controller_Main">
+   <children>
+      <MenuBar prefWidth="750.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem onAction="#close" mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="40.0" layoutY="29.0" text="Football Club" />
+      <Label layoutX="200.0" layoutY="29.0" text="Leaderboard" />
+      <Label layoutX="200.0" layoutY="279.0" text="Lastest Match" />
+      <Button layoutX="115.0" layoutY="25.0" mnemonicParsing="false" onAction="#addClub" text="+" />
+      <Button layoutX="140.0" layoutY="25.0" mnemonicParsing="false" onAction="#deleteClub" prefWidth="25.0" text="-" />
+      <Button layoutY="425.0" mnemonicParsing="false" onAction="#addMatch" prefWidth="200.0" text="Add Matches" />
+      <Button layoutY="450.0" mnemonicParsing="false" onAction="#updateMatch" prefWidth="200.0" text="Update Matches" />
+      <Button layoutY="475.0" mnemonicParsing="false" onAction="#deleteMatch" prefWidth="200.0" text="Delete Matches" />
+      <ListView fx:id="LView" layoutY="50.0" prefHeight="375.0" prefWidth="200.0" />
+      <TableView fx:id="TViewLeaderboard" layoutX="200.0" layoutY="50.0" prefHeight="225.0" prefWidth="550.0">
+        <columns>
+            <TableColumn fx:id="colId" prefWidth="80.0" text="Pos" />
+            <TableColumn fx:id="colName" prefWidth="150.0" text="Club" />
+            <TableColumn fx:id="colWin" prefWidth="80.0" text="Win" />
+            <TableColumn fx:id="colLose" prefWidth="80.0" text="Lose" />
+            <TableColumn fx:id="colDraw" prefWidth="80.0" text="Draw" />
+            <TableColumn fx:id="colPoint" prefWidth="80.0" text="Point" />
+        </columns>
+      </TableView>
+      <TableView fx:id="TViewMatch" layoutX="200.0" layoutY="300.0" prefHeight="200.0" prefWidth="550.0">
+         <columns>
+            <TableColumn fx:id="colClub1" prefWidth="110.0" text="Club1" />
+            <TableColumn fx:id="colClub2" prefWidth="110.0" text="Club2" />
+            <TableColumn fx:id="colScore1" prefWidth="110.0" text="Score1" />
+            <TableColumn fx:id="colScore2" prefWidth="110.0" text="Score2" />
+            <TableColumn fx:id="colWL" prefWidth="110.0" text="Win Lose" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
